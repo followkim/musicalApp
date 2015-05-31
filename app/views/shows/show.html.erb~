@@ -1,0 +1,27 @@
+
+<table>
+    <tr>
+      <td><%= link_to image_tag(@show.picture, options={height: "100"}), @show %>
+      <td>
+        <h2><%= @show.name %></h2>
+  
+        <% if not @show.desc.empty? %>
+          <br><b>Description:</b> <%= @show.desc %>
+        <% end %>
+
+        <br><b>Opened:</b> <%= @show.opened %>
+
+        <% if not @show.link.empty? %>
+          <br><a href="<%= @show.link %>">Show Website<a/>
+        <% end %>
+
+        <br>
+        
+      </td>
+    </tr>
+</table>
+
+<br><%= link_to image_tag('delete.png')+" Delete Show", 
+		@show, method: :delete, data: { confirm: 'Are you sure?' } %>
+<br><%= link_to image_tag('edit.png')+" Edit Show", edit_show_path(@show) %>
+<br><%= link_to image_tag('back.png')+' Back', shows_path %>
