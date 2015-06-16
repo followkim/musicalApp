@@ -1,37 +1,72 @@
 <%= form_for(@show) do |f| %>
-  <% if @show.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@show.errors.count, "error") %> prohibited this show from being saved:</h2>
 
-      <ul>
-      <% @show.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<!-- Check for errors from edit -->
+	<% if @show.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@show.errors.count, "error") %> prohibited this show from being saved:</h2>
+			<ul>
+				<% @show.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :picture %><br>
-    <%= f.text_field :picture %>
-  </div>
-  <div class="field">
-    <%= f.label :desc %><br>
-    <%= f.text_area :desc %>
-  </div>
-  <div class="field">
-    <%= f.label :opened %><br>
-    <%= f.date_select :opened, {:order => [:month, :day, :year],:prompt => true, :start_year =>1950, :end_year => Time.now.year} %>
-  </div>
-  <div class="field">
-    <%= f.label :link %><br>
-    <%= f.text_field :link %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="field">
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :picture %><br>
+		<%= image_tag(@show.picture, options={height: "250"}) %><br>
+		<%= f.text_field :picture %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :desc %><br>
+		<%= f.text_area :desc %>
+	</div>
+	
+	<!-- Date opened -->
+	<div class="field">
+		<%= f.label :opened %><br>
+		<%= f.date_select :opened, {:order => [:month, :day, :year],:prompt => true, :start_year =>1900, :end_year => Time.now.year} %>
+	</div>
+	
+	<!-- Show website -->
+	<div class="field">
+		<%= f.label :link %><br>
+		<%= f.text_field :link %>
+	</div>
+		
+	<!-- Show keywords -->
+	<div class = "field">
+		<% i = -1 %>
+		<%= f.label "Keywords" %>
+		<table>
+			<tr>
+				<% Keyword.order(:name).each do |keyword| %>
+					<% if (((i=i+1)%5) == 0) %>
+						</tr><tr>
+					<% end %>
+					<td>
+						<%= check_box_tag 'show[keyword_ids][]', keyword.id, @show.keyword_ids.include?(keyword.id), :id => dom_id(keyword) %>
+						<%= label_tag dom_id(keyword), keyword.name, :class => "check_box_label" %>
+					</td>
+				<% end %>
+			</tr>
+		</table>
+	</div> 
+
+	<!-- Show Artists -->
+	<div>
+		<%= f.label :artist %><br>
+		<%= f.select :artist_ids, Artist.order(:lname).collect {|a| [ a.lfName, a.id ] },{}, {:multiple => true, :size => Artist.count } %>
+	</div>
+
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+
 <% end %>

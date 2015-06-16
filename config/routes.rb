@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-  resources :songs
-  resources :keywords
-  resources :artists
+  resources :shows do
+    resources :albums
+    resources :keywords
+  end
   resources :albums
-  resources :shows
-	
-  root 'shows#index'
+  resources :artists do 
+    resources :shows
+  end
+  resources :keywords
+
+#  resources :keywords
+#  resources :comments
+  
+  
+  root :to => 'shows#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

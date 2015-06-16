@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+ks = Keyword.create [
+	{name: 'Opertic'},
+	{name: 'Jukebox'},
+	{name: 'Tony Award Winning'},
+	{name: 'Children'},
+	{name: 'Musical Play'},
+	{name: 'Dance'},
+	{name: 'Meta'},
+	{name: 'Disney'},
+	{name: 'Movie Musical'},
+	{name: 'Revue'}
+]	

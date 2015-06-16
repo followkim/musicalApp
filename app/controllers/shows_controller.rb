@@ -1,20 +1,25 @@
 class ShowsController < ApplicationController
   before_action :set_show, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /shows
   # GET /shows.json
   def index
-    @shows = Show.all
+    @shows = Show.order(:opened)
   end
 
   # GET /shows/1
   # GET /shows/1.json
   def show
+	@albums = @show.albums
   end
+	
 
   # GET /shows/new
   def new
     @show = Show.new
+    if (not params[:artist_id].nil?)
+		@show.artists << Artist.find(params[:artist_id])
+	end
   end
 
   # GET /shows/1/edit
@@ -28,7 +33,7 @@ class ShowsController < ApplicationController
 
     respond_to do |format|
       if @show.save
-        format.html { redirect_to @show, notice: 'Show was successfully created.' }
+        format.html { redirect_to shows_url, notice: 'Show was successfully created.' }
         format.json { render :show, status: :created, location: @show }
       else
         format.html { render :new }
@@ -42,7 +47,7 @@ class ShowsController < ApplicationController
   def update
     respond_to do |format|
       if @show.update(show_params)
-        format.html { redirect_to @show, notice: 'Show was successfully updated.' }
+        format.html { redirect_to show_url, notice: 'Show was successfully updated.' }
         format.json { render :show, status: :ok, location: @show }
       else
         format.html { render :edit }
@@ -56,7 +61,7 @@ class ShowsController < ApplicationController
   def destroy
     @show.destroy
     respond_to do |format|
-      format.html { redirect_to shows_url, notice: 'Show was successfully destroyed.' }
+      format.html { redirect_to show_url, notice: 'Show was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +74,6 @@ class ShowsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def show_params
-      params.require(:show).permit(:name, :picture, :desc, :opened, :link)
-    end
-end
+       params.require(:show)# .permit(:name, :picture, :desc, :opened, :link, :artist_id, :keyword_ids)
+   end
+ end

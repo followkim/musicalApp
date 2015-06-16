@@ -1,0 +1,5 @@
+<table>
+	<% @shows.order(:opened).each do |s| %>
+		<%= render 'shows/show', :show => s %>
+	<% end %>
+</table>

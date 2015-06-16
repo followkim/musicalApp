@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150531031243) do
+ActiveRecord::Schema.define(version: 20150616003048) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20150531031243) do
     t.date     "released"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "show_id",    limit: 4
+    t.string   "spotify",    limit: 255
   end
 
   create_table "artists", force: :cascade do |t|
@@ -31,11 +33,37 @@ ActiveRecord::Schema.define(version: 20150531031243) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "artists_shows", id: false, force: :cascade do |t|
+    t.integer "artist_id", limit: 4
+    t.integer "show_id",   limit: 4
+  end
+
+  add_index "artists_shows", ["artist_id"], name: "index_artists_shows_on_artist_id", using: :btree
+  add_index "artists_shows", ["show_id"], name: "index_artists_shows_on_show_id", using: :btree
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "commenter",  limit: 255
+    t.text     "body",       limit: 65535
+    t.integer  "show_id",    limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "comments", ["show_id"], name: "index_comments_on_show_id", using: :btree
+
   create_table "keywords", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "keywords_shows", id: false, force: :cascade do |t|
+    t.integer "keyword_id", limit: 4
+    t.integer "show_id",    limit: 4
+  end
+
+  add_index "keywords_shows", ["keyword_id"], name: "index_keywords_shows_on_keyword_id", using: :btree
+  add_index "keywords_shows", ["show_id"], name: "index_keywords_shows_on_show_id", using: :btree
 
   create_table "shows", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -54,4 +82,5 @@ ActiveRecord::Schema.define(version: 20150531031243) do
     t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "comments", "shows"
 end

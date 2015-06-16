@@ -1,0 +1,23 @@
+<table>
+	<tr>
+		<td><%=image_tag(@album.picture, options={width: "100"}) %></td>	
+		<td>
+			<b><%= @album.name %></b>
+			<% if not @album.released.to_s.empty? %>
+				<br><b>Released: </b><%= @album.released.strftime("%B %d, %Y") %>
+			<% end %>
+
+			<% if not @album.desc.to_s.empty? %>
+				<br><%= @album.desc %>
+			<% end %>
+			
+			<br>
+			<% if not @album.spotify.nil? %>
+				<%= link_to image_tag('spotify.png', options={height: "16"}), @album.spotify, :target => "_spotify" %>
+			<% end %>
+			
+			<%= link_to image_tag('edit.png'), edit_album_path(@album) %>
+			<%= link_to image_tag('delete.png'), @album, method: :delete, data: { confirm: 'Are you sure?' } %>
+		</td>
+	</tr>
+</table>

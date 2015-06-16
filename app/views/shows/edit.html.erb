@@ -1,6 +1,6 @@
-<h1>Editing Show</h1>
+<h1>Editing "<%= @show.name %>"</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @show %> |
-<%= link_to 'Back', shows_path %>
+<br><%= link_to 'Back to ' + @show.name, @show %>
+<br><%= link_to 'View All Shows', shows_path %>

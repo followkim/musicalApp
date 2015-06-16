@@ -12,19 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :fname %><br>
+    <%= f.label "First Name" %><br>
     <%= f.text_field :fname %>
   </div>
   <div class="field">
-    <%= f.label :lname %><br>
+    <%= f.label "Last Name" %><br>
     <%= f.text_field :lname %>
   </div>
   <div class="field">
-    <%= f.label :dob %><br>
-    <%= f.date_select :dob %>
+    <%= f.label "Date of Birth" %><br>
+    <%= f.date_select :dob, {:order => [:month, :day, :year],:prompt => true, :start_year =>1950, :end_year => Time.now.year} %>
+
   </div>
   <div class="field">
-    <%= f.label :link %><br>
+    <%= f.label "Website" %><br>
     <%= f.text_field :link %>
   </div>
   <div class="actions">

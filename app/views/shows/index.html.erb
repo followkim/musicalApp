@@ -1,33 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Shows</h1>
+<h1>Listing ALL Shows</h1>
 
-<table>
-  <% @shows.each do |show| %>
-    <tr>
-      <td><%= link_to image_tag(show.picture, options={height: "100"}), show %>
-      <td>
-        <h2><%= show.name %></h2>
-  
-        <% if not show.desc.empty? %>
-          <br><b>Description:</b> <%= show.desc %>
-        <% end %>
-
-        <br><b>Opened:</b> <%= show.opened %>
-
-        <% if not show.link.empty? %>
-          <br><a href="<%= show.link %>">Show Website<a/>
-        <% end %>
-
-        <br>
-        <%= link_to image_tag('view.png', alt: 'Show'), show %>
-        <%= link_to image_tag('edit.png', alt: 'Edit'), edit_show_path(show) %>
-        <%= link_to image_tag('delete.png', alt: 'Delete'), 
-		show, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </td>
-    </tr>
-  <% end %>
-</table>
+<%= render 'shows/list'  %>
 
 <br>
 

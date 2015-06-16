@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
-
+	
   # GET /artists
   # GET /artists.json
   def index
@@ -10,6 +10,7 @@ class ArtistsController < ApplicationController
   # GET /artists/1
   # GET /artists/1.json
   def show
+	@shows = @artist.shows
   end
 
   # GET /artists/new
@@ -71,4 +72,5 @@ class ArtistsController < ApplicationController
     def artist_params
       params.require(:artist).permit(:fname, :lname, :dob, :link)
     end
+
 end

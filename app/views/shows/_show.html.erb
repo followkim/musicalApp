@@ -1,0 +1,29 @@
+<table>
+    <tr>
+      <td><%= link_to image_tag(show.picture, options={width: "200"}), show %>
+      <td>
+        <h2><%= link_to show.name, show %></h2>
+        <b>By:</b> 
+			<%= raw show.artists.collect { |a| link_to(a.flName, artist_path(a)) }.join ', ' %>
+			
+        <% if not show.desc.empty? %>
+          <p><b>Description:</b> <%= show.desc %>
+        <% end %>
+
+		<% if not show.opened.nil? %>
+			<p><b>Opened:</b> <%= show.opened.strftime("%B %d, %Y") %>
+		<% end %>
+
+        <p><b>Keywords: </b><%=  show.keywords.collect {|u| u.name}.join ', ' %>
+
+        <% if not show.link.empty? %>
+          <p><b>Website:</b> <a href="<%= show.link %>"><%= show.link %><a/>
+        <% end %>
+		<p><%= link_to image_tag('edit.png')+" Edit "+show.name, edit_show_path(show) %>
+		<br><%= link_to image_tag('add.png')+ "Add New Album to "+show.name, new_show_album_path(show) %>
+		<br><%= link_to image_tag('delete.png')+" Delete "+show.name, 
+				show, method: :delete, data: { confirm: 'Are you sure?' } %>
+        
+      </td>
+    </tr>
+</table>
