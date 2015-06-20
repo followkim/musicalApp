@@ -55,9 +55,15 @@ class AlbumsController < ApplicationController
   # DELETE /albums/1
   # DELETE /albums/1.json
   def destroy
+	if (@album.show.nil?) 
+		redirectUrl = albums_url
+	else 
+		redirectUrl = show_url(@album.show)
+	end
+		
     @album.destroy
     respond_to do |format|
-      format.html { redirect_to show_url(@album.show), notice: 'Album was successfully destroyed.' }
+      format.html { redirect_to redirectUrl, notice: 'Album was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

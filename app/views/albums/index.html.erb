@@ -1,5 +1,6 @@
 <h1>All Albums</h1>
 
-<%= render 'albums/list'  %>
+<%= render 'albums/list',  :albums => Album.all %>
+
 
 <%= link_to 'Back', albums_path %>
