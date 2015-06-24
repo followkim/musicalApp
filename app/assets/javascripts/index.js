@@ -1,8 +1,7 @@
-console.log ("index.js loaded.");
 function SetUpListeners() {
 	$(".ShowHideButton").each(function() {
 			$(this).on("click", function(){
-				console.log("CLICK!!");
+
 				var nextRow = $(this).closest('tr').next();
 				var clickButton = $(this);
 
