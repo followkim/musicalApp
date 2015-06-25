@@ -1,0 +1,662 @@
+
+---
+albums:
+  columns:
+  - id
+  - name
+  - picture
+  - desc
+  - released
+  - created_at
+  - updated_at
+  - show_id
+  - spotify
+  records: 
+  - - 1
+    - 'Bat Boy: The Musical (2001 Original Off-Broadway Cast)'
+    - batboy_ob.jpg
+    - Original recording.
+    - 2015-06-14
+    - 2015-06-14 03:07:43.000000000 Z
+    - 2015-06-16 00:58:38.000000000 Z
+    - 1
+    - https://play.spotify.com/album/2aZyEUCzKLOPE1mitgI5jC
+  - - 2
+    - 'Bat Boy: The Musical (London Cast Recording)'
+    - batboy_london.jpg
+    - London cast recording!
+    - 2015-06-14
+    - 2015-06-14 03:19:39.000000000 Z
+    - 2015-06-14 08:28:21.000000000 Z
+    - 1
+    - 
+  - - 4
+    - 'Legally Blonde The Musical: Original London Cast Recording'
+    - lb_london.jpg
+    - ''
+    - 2010-08-16
+    - 2015-06-15 00:41:46.000000000 Z
+    - 2015-06-16 01:02:41.000000000 Z
+    - 2
+    - https://play.spotify.com/album/71vELPejXHGW2BYia2cR9n
+  - - 5
+    - 'Legally Blonde The Musical: The Original Broadway Cast'
+    - lb_broadway.jpg
+    - Like Wicked, this show is a girl-friendly extravaganza; the main difference--and
+      it's a big one--is that the score of Legally Blonde is better. Based on the
+      hit Reese Witherspoon movie, the zippy, frothy show tells the story of SoCal,
+      pink-loving sorority girl Elle Woods, who enrolls at Harvard Law and goes on
+      to prove that appearances can be deceiving. The opening number, "Omigod You
+      Guys," gives an idea of what the Broadway-pop score by Laurence O'Keefe (Bat
+      Boy--The Musical) and Nell Benjamin is up to, embracing its over-the-top cheer
+      with goofily infectious energy. Sure, a couple of numbers feel a bit derivative
+      (the show with the witches has "Popular," this one has "Positive"), and the
+      Celtic detour ("Ireland") is rather puzzling, but overall the songs are firing
+      on all cylinders. Just check out the use of a marching band on "What You Want"
+      for instance. Laura Bell Bundy (Amber von Tussle in Hairspray) is a charming
+      Elle, and she delivers numbers such as "So Much Better" with the requisite elan.
+      But this is not a one-woman show, and Bundy is surrounded by a crack team, including
+      the endearing Christian Borle as Elle's love interest Emmett, power-piped Orfeh
+      as hairdresser Paulette and up-and-comer Leslie Kritzer as Delta Nu's Serena.
+      --Elisabeth Vincentelli
+    - 2007-07-17
+    - 2015-06-15 00:45:32.000000000 Z
+    - 2015-06-20 04:16:15.000000000 Z
+    - 2
+    - https://play.spotify.com/album/2GJq9KGedI4JaMLXViMtjA
+  - - 6
+    - 'Heathers: The Musical (World Premeire Cast Recording)'
+    - heathers_ocr.jpg
+    - ''
+    - 2014-06-17
+    - 2015-06-15 00:49:21.000000000 Z
+    - 2015-06-20 03:04:36.000000000 Z
+    - 3
+    - https://play.spotify.com/album/1aIXRUYjG6ORo2vGnrAk0F
+  - - 11
+    - " Sarah, Plain and Tall ~ the musical Cast Recording"
+    - spt.jpg
+    - 'This CD of the show with its original cast was produced by ShowBiz Records. '
+    - 2003-12-15
+    - 2015-06-16 00:03:12.000000000 Z
+    - 2015-06-16 00:04:27.000000000 Z
+    - 8
+    - 
+  - - 12
+    - 'Les Misérables: Original Broadway Cast recording'
+    - lesmis_obcr.jpg
+    - ''
+    - 1990-10-25
+    - 2015-06-16 01:20:40.000000000 Z
+    - 2015-06-16 01:31:08.000000000 Z
+    - 11
+    - ''
+  - - 13
+    - Les Miserables 10th Anniversary Concert
+    - lesmis_10.jpg
+    - ''
+    - 2004-06-01
+    - 2015-06-16 01:57:14.000000000 Z
+    - 2015-06-16 01:57:14.000000000 Z
+    - 11
+    - ''
+  - - 14
+    - Les Miserables 25th Anniversary Recording
+    - lesmis_25.jpg
+    - ''
+    - 2010-10-12
+    - 2015-06-16 02:01:58.000000000 Z
+    - 2015-06-16 02:01:58.000000000 Z
+    - 11
+    - ''
+  - - 15
+    - Les Miserables Complete Symphonic Recording
+    - lesmis_csr.jpg
+    - ''
+    - 1990-01-18
+    - 2015-06-16 02:09:07.000000000 Z
+    - 2015-06-16 02:18:56.000000000 Z
+    - 11
+    - ''
+  - - 16
+    - 'Les Misérables: Original Motion Picture Soundtrack'
+    - lesmis_omps.jpg
+    - ''
+    - 2013-03-19
+    - 2015-06-16 02:11:52.000000000 Z
+    - 2015-06-16 02:11:52.000000000 Z
+    - 11
+    - ''
+  - - 17
+    - Les Miserables London Cast Recording
+    - lesmis_london.jpg
+    - ''
+    - 1989-11-29
+    - 2015-06-16 02:17:57.000000000 Z
+    - 2015-06-16 06:46:46.000000000 Z
+    - 11
+    - ''
+  - - 19
+    - Martin Guerre (London Cast Recording)
+    - mg_london.jpg
+    - ''
+    - 1996-11-26
+    - 2015-06-16 09:35:21.000000000 Z
+    - 2015-06-16 09:35:21.000000000 Z
+    - 13
+    - ''
+  - - 20
+    - Martin Guerre (1999 UK Tour Cast)
+    - mg_uk.jpg
+    - ''
+    - 1999-09-14
+    - 2015-06-16 09:36:03.000000000 Z
+    - 2015-06-16 09:36:03.000000000 Z
+    - 13
+    - ''
+  - - 21
+    - Miss Saigon (Original 1989 London Cast)
+    - misssaigon_london.jpg
+    - ''
+    - 1990-02-02
+    - 2015-06-16 09:40:00.000000000 Z
+    - 2015-06-16 09:40:00.000000000 Z
+    - 14
+    - ''
+  - - 22
+    - Miss Saigon - 25th Anniversary
+    - misssaigon_25.jpg
+    - ''
+    - 2014-11-10
+    - 2015-06-16 09:41:02.000000000 Z
+    - 2015-06-16 09:41:02.000000000 Z
+    - 14
+    - ''
+  - - 23
+    - The Pirate Queen Original Broadway Cast
+    - piratequeen_london.jpg
+    - ''
+    - 2007-07-03
+    - 2015-06-16 10:02:52.000000000 Z
+    - 2015-06-16 10:02:52.000000000 Z
+    - 15
+    - ''
+  - - 24
+    - " The Phantom of the Opera (Original Motion Picture Soundtrack)"
+    - poto_omps.jpg
+    - ''
+    - 2004-11-23
+    - 2015-06-16 10:09:31.000000000 Z
+    - 2015-06-16 10:09:31.000000000 Z
+    - 16
+    - ''
+  - - 25
+    - Phantom Of the Opera (Original Cast Recording)
+    - poto_ocr.jpg
+    - released 1986
+    - 1986-01-01
+    - 2015-06-16 10:14:20.000000000 Z
+    - 2015-06-16 10:15:00.000000000 Z
+    - 16
+    - ''
+  - - 26
+    - 'The Phantom of the Opera at the Royal Albert Hall: In Celebration of 25 Years'
+    - poto_25.jpg
+    - ''
+    - 2012-02-06
+    - 2015-06-16 10:16:37.000000000 Z
+    - 2015-06-16 10:16:37.000000000 Z
+    - 16
+    - ''
+  - - 27
+    - " Phantom Of The Opera - Canadian Cast Recording"
+    - poto_ocr.jpg
+    - ''
+    - 2002-11-26
+    - 2015-06-16 10:20:58.000000000 Z
+    - 2015-06-16 10:20:58.000000000 Z
+    - 16
+    - ''
+  - - 28
+    - Wicked (Original Cast)
+    - wicked_oc.jpg
+    - ''
+    - 2003-12-16
+    - 2015-06-20 04:14:09.000000000 Z
+    - 2015-06-20 04:14:09.000000000 Z
+    - 17
+    - ''
+  - - 29
+    - Phantom Of the Opera (Original Cast Recording)
+    - poto_ocr.jpg
+    - released 1986
+    - 1986-01-01
+    - 2015-06-25 02:47:05.000000000 Z
+    - 2015-06-25 02:47:05.000000000 Z
+    - 16
+    - ''
+
+---
+artists:
+  columns:
+  - id
+  - fname
+  - lname
+  - dob
+  - link
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Laurence
+    - O'Keefe
+    - 
+    - https://twitter.com/larryisokeefe
+    - 2015-06-14 23:47:03.000000000 Z
+    - 2015-06-15 03:20:32.000000000 Z
+  - - 2
+    - Keythe
+    - Farley
+    - 
+    - 
+    - 2015-06-15 00:35:13.000000000 Z
+    - 2015-06-15 00:35:13.000000000 Z
+  - - 3
+    - Brian
+    - Flemming
+    - 
+    - 
+    - 2015-06-15 00:35:44.000000000 Z
+    - 2015-06-15 00:35:44.000000000 Z
+  - - 4
+    - Kevin
+    - Murphy
+    - 
+    - 
+    - 2015-06-15 00:54:42.000000000 Z
+    - 2015-06-15 00:54:42.000000000 Z
+  - - 5
+    - Nell
+    - Benjamin
+    - 
+    - 
+    - 2015-06-15 01:06:06.000000000 Z
+    - 2015-06-15 01:06:06.000000000 Z
+  - - 8
+    - Alain
+    - Boublil
+    - 
+    - ''
+    - 2015-06-16 01:07:55.000000000 Z
+    - 2015-06-16 01:07:55.000000000 Z
+  - - 9
+    - Claude-Michel
+    - Schönberg
+    - 
+    - ''
+    - 2015-06-16 01:08:17.000000000 Z
+    - 2015-06-16 01:08:17.000000000 Z
+  - - 11
+    - Andrew Lloyd
+    - Webber
+    - 
+    - ''
+    - 2015-06-16 10:04:41.000000000 Z
+    - 2015-06-16 10:04:41.000000000 Z
+  - - 12
+    - Tim
+    - Rice
+    - 
+    - ''
+    - 2015-06-16 10:05:25.000000000 Z
+    - 2015-06-16 10:05:25.000000000 Z
+  - - 13
+    - Stephen
+    - Schwartz
+    - 
+    - ''
+    - 2015-06-20 04:10:24.000000000 Z
+    - 2015-06-20 04:10:24.000000000 Z
+
+---
+artists_shows:
+  columns:
+  - artist_id
+  - show_id
+  records: 
+  - - 1
+    - 1
+  - - 1
+    - 8
+  - - 1
+    - 3
+  - - 1
+    - 2
+  - - 2
+    - 1
+  - - 3
+    - 1
+  - - 4
+    - 3
+  - - 5
+    - 2
+  - - 5
+    - 8
+  - - 8
+    - 15
+  - - 8
+    - 14
+  - - 8
+    - 13
+  - - 8
+    - 11
+  - - 9
+    - 13
+  - - 9
+    - 11
+  - - 9
+    - 14
+  - - 9
+    - 15
+  - - 11
+    - 16
+  - - 12
+    - 16
+  - - 13
+    - 17
+
+---
+keywords:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Comedy
+    - 2015-06-14 23:46:13.000000000 Z
+    - 2015-06-14 23:46:13.000000000 Z
+  - - 2
+    - Adaptation
+    - 2015-06-14 23:49:15.000000000 Z
+    - 2015-06-14 23:49:15.000000000 Z
+  - - 7
+    - Opertic
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-15 23:29:43.000000000 Z
+  - - 8
+    - Jukebox
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-15 23:29:43.000000000 Z
+  - - 9
+    - Tony Award
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-24 23:24:08.000000000 Z
+  - - 10
+    - Children
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-15 23:29:43.000000000 Z
+  - - 11
+    - Musical Play
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-15 23:29:43.000000000 Z
+  - - 12
+    - Dance
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-15 23:29:43.000000000 Z
+  - - 13
+    - Meta
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-15 23:29:43.000000000 Z
+  - - 14
+    - Disney
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-15 23:29:43.000000000 Z
+  - - 15
+    - Movie Musical
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-15 23:29:43.000000000 Z
+  - - 16
+    - Revue
+    - 2015-06-15 23:29:43.000000000 Z
+    - 2015-06-15 23:29:43.000000000 Z
+  - - 17
+    - Rock
+    - 2015-06-15 23:45:32.000000000 Z
+    - 2015-06-15 23:45:32.000000000 Z
+  - - 18
+    - Dark
+    - 2015-06-15 23:46:12.000000000 Z
+    - 2015-06-15 23:46:12.000000000 Z
+
+---
+keywords_shows:
+  columns:
+  - keyword_id
+  - show_id
+  records: 
+  - - 1
+    - 2
+  - - 1
+    - 3
+  - - 1
+    - 17
+  - - 1
+    - 1
+  - - 2
+    - 2
+  - - 2
+    - 13
+  - - 2
+    - 14
+  - - 2
+    - 1
+  - - 2
+    - 15
+  - - 2
+    - 16
+  - - 2
+    - 17
+  - - 2
+    - 11
+  - - 2
+    - 8
+  - - 2
+    - 3
+  - - 7
+    - 16
+  - - 7
+    - 11
+  - - 7
+    - 15
+  - - 7
+    - 13
+  - - 7
+    - 14
+  - - 9
+    - 16
+  - - 9
+    - 14
+  - - 9
+    - 2
+  - - 9
+    - 11
+  - - 9
+    - 17
+  - - 10
+    - 17
+  - - 10
+    - 8
+  - - 11
+    - 17
+  - - 17
+    - 2
+  - - 17
+    - 1
+  - - 17
+    - 3
+  - - 18
+    - 3
+  - - 18
+    - 1
+
+---
+shows:
+  columns:
+  - id
+  - name
+  - picture
+  - desc
+  - opened
+  - link
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 'Bat Boy: The Musical'
+    - batboy.jpg
+    - 'Bat Boy: The Musical is an American musical with a book by Keythe Farley and
+      Brian Flemming and music and lyrics by Laurence O''Keefe, based on a June 23,
+      1992 Weekly World News story about a half-boy, half-bat, dubbed "Bat Boy", who
+      grew up living in a cave. '
+    - 1997-10-31
+    - ''
+    - 2015-05-31 03:16:41.000000000 Z
+    - 2015-06-15 22:30:04.000000000 Z
+  - - 2
+    - 'Legally Blonde: The Musical'
+    - legallyblonde.jpg
+    - Legally Blonde follows the story of sorority president Elle Woods as she crosses
+      the country on a mission to find love at Harvard Law School. After discovering
+      how the law can be used to help others, she uses her new found skills to defend
+      a workout-queen in a murder trial, defying the odds and proving that pink can
+      save the day!
+    - 2007-04-29
+    - http://www.legallyblondethemusical.com/
+    - 2015-05-31 03:19:36.000000000 Z
+    - 2015-06-16 08:38:33.000000000 Z
+  - - 3
+    - 'Heathers: The Musical'
+    - heathers.jpg
+    - 'Heathers: The Musical is a rock musical with music, lyrics, and a book by Laurence
+      O''Keefe and Kevin Murphy and based on the 1988 cult film Heathers. After a
+      sold-out Los Angeles tryout, the show had a production Off-Broadway in 2014.'
+    - 2014-03-31
+    - http://heathersthemusical.com
+    - 2015-05-31 04:23:18.000000000 Z
+    - 2015-06-16 00:13:39.000000000 Z
+  - - 8
+    - Sarah, Plain and Tall
+    - sptm.jpg
+    - 'Based on Patricia MacLachlan’s Newbery Medal award-winning children’s book
+      of the same name, the musical Sarah, Plain and Tall was produced by TheatreWorksUSA
+      as summer theater for children. The musical’s book is by Julia Jordan, lyrics
+      by Nell Benjamin, and music by Laurence O’Keefe. The musical, directed by Joe
+      Calarco, opened at the Lucille Lortel Theatre in New York City on July 17, 2002
+      and received rave reviews from The New York Times, Variety and a host of other
+      papers. TheatreworksUSA: artistic director Barbara Pasternack and managing director
+      Ken Arthur presented Sarah, Plain and Tall by special arrangement with the Lucille
+      Lortel Theatre Foundation. The show was developed in part from support by AT&T
+      through its First Stage program. The web site, SarahPlainandTall.net, provides
+      details of the story, songs, pictures, reviews and bios of the artists. '
+    - 2002-07-17
+    - http://SarahPlainandTall.net
+    - 2015-06-15 23:59:20.000000000 Z
+    - 2015-06-16 02:22:24.000000000 Z
+  - - 11
+    - Les Misérables
+    - lesmis.jpg
+    - ''
+    - 1985-10-08
+    - ''
+    - 2015-06-16 01:11:38.000000000 Z
+    - 2015-06-16 01:11:38.000000000 Z
+  - - 13
+    - Martin Guerre
+    - mg.jpg
+    - "Martin Guerre is a two-act musical with a book by Claude-Michel Schönberg and
+      Alain Boublil, lyrics by Alain Boublil, Edward Hardy and Stephen Clark, and
+      music by Claude-Michel Schönberg.\r\n\r\nWritten in the operatic style similar
+      to the creative team's previous efforts, Les Misérables and Miss Saigon, the
+      bulk of the show is sung-through, with little spoken dialogue between the musical
+      numbers.  It failed to match the box office success of its two predecessors."
+    - 1996-11-10
+    - ''
+    - 2015-06-16 09:29:41.000000000 Z
+    - 2015-06-20 04:15:33.000000000 Z
+  - - 14
+    - Miss Saigon
+    - misssaigon.jpg
+    - Miss Saigon is a musical by Claude-Michel Schönberg and Alain Boublil, with
+      lyrics by Boublil and Richard Maltby, Jr. It is based on Giacomo Puccini's opera
+      Madame Butterfly, and similarly tells the tragic tale of a doomed romance involving
+      an Asian woman abandoned by her American lover. The setting of the plot is relocated
+      to the 1970s Saigon during the Vietnam War, and Madame Butterfly's story of
+      marriage between an American lieutenant and geisha is replaced by a romance
+      between an American GI and a Vietnamese bargirl.
+    - 1989-09-20
+    - http://www.miss-saigon.com
+    - 2015-06-16 09:38:34.000000000 Z
+    - 2015-06-16 09:38:34.000000000 Z
+  - - 15
+    - The Pirate Queen
+    - piratequeen.jpg
+    - "The Pirate Queen is a musical written by Claude-Michel Schönberg and Alain
+      Boublil. John Dempsey is the co-lyricist. The Pirate Queen marks the first time
+      Boublil and Schönberg have created a musical with American collaborators. It
+      is based on the life and adventures of the 16th century Irish chieftain and
+      pirate Gráinne O'Malley, who was one of the last Irish clan leaders to resist
+      the English conquest of Gaelic Ireland.\r\n\r\nAfter a Chicago production, the
+      musical ran on Broadway from March to June 2007. The cast featured Stephanie
+      J. Block as Grace O'Malley, Hadley Fraser as Tiernan and Linda Balgord, who
+      was nominated for a Drama Desk Award for her performance as Queen Elizabeth
+      I. The show received harsh appraisals from the critics and had weak sales."
+    - 2006-10-03
+    - ''
+    - 2015-06-16 10:01:41.000000000 Z
+    - 2015-06-16 10:01:41.000000000 Z
+  - - 16
+    - Phantom of the Opera
+    - poto.jpg
+    - "The Phantom of the Opera is a musical with music by Andrew Lloyd Webber and
+      lyrics by Charles Hart with additions from Richard Stilgoe. Lloyd Webber and
+      Stilgoe also wrote the musical's book together.[1] Based on the French novel
+      Le Fantôme de l'Opéra by Gaston Leroux, its central plot revolves around a beautiful
+      soprano, Christine Daaé, who becomes the obsession of a mysterious, disfigured
+      musical genius.\r\n\r\nThe musical opened in London's West End in 1986, and
+      on Broadway in 1988. It won the 1986 Olivier Award and the 1988 Tony Award for
+      Best Musical, and Michael Crawford (in the title role) won the Olivier and Tony
+      Awards for Best Actor in a Musical.[2] It is the longest running show in Broadway
+      history by a wide margin, and celebrated its 10,000th Broadway performance on
+      11 February 2012, the first production ever to do so.[3] It is the second longest-running
+      West End musical, after Les Misérables, and the third longest-running West End
+      show overall, after The Mousetrap.[4][5][6]\r\n\r\nWith total estimated worldwide
+      gross receipts of over $5.6 billion (the highest in history) and total Broadway
+      gross of US$845 million (surpassed only by The Lion King),[7] Phantom is the
+      most financially successful entertainment event to date.[8][9] By 2011 it had
+      been seen by over 130 million people in 145 cities in 27 countries, and continues
+      to play in both London and New York.[8]"
+    - 1986-10-09
+    - ''
+    - 2015-06-16 10:05:06.000000000 Z
+    - 2015-06-16 10:22:14.000000000 Z
+  - - 17
+    - 'Wicked: The Untold Story of the Witches of Oz'
+    - wicked.jpg
+    - 'Wicked: The Untold Story of the Witches of Oz is a musical with music and lyrics
+      by Stephen Schwartz and book by Winnie Holzman. It is based on the 1995 Gregory
+      Maguire novel Wicked: The Life and Times of the Wicked Witch of the West, an
+      alternative telling of the witches from the 1939 film The Wizard of Oz and L.
+      Frank Baum''s classic 1900 story The Wonderful Wizard of Oz. The musical is
+      told from the perspective of the witches of the Land of Oz; its plot begins
+      before and continues after Dorothy''s arrival in Oz from Kansas and includes
+      several references to the 1939 film and Baum''s novel. Wicked tells the story
+      of two unlikely friends, Elphaba (the Wicked Witch of the West) and Glinda the
+      Good, who struggle through opposing personalities and viewpoints, rivalry over
+      the same love-interest, reactions to the Wizard''s corrupt government, and,
+      ultimately, Elphaba''s public fall from grace.'
+    - 2013-10-30
+    - ''
+    - 2015-06-20 04:12:53.000000000 Z
+    - 2015-06-20 04:13:08.000000000 Z

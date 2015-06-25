@@ -17,6 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Sortable tables
 gem 'jquery-datatables-rails', '~> 3.3.0'
 
+# For data dumping
+gem 'yaml_db'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
