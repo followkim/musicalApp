@@ -1,33 +1,44 @@
 
-<table>
+<table id="sortable">
 	<thead>
-		<th>&nbsp;</th>
-		<th>Name</th>
-		<th>Opened</th>
-		<th>Artists</th>
-		<th>Keywords</th>
-		<th>&nbsp;</th>
+		<!-- th><span></span></th -->
+		<th><span>Name</span></th>
+		<th><span>Opened</span></th>
+		<th><span>Artists</span></th>
+		<th><span>Keywords</span></th>
+		<th><span>&nbsp;</span></th>
 	</thead>
-	<% @shows.each do |show| %>
-		<tr>
-			<td><%= image_tag('expand.png', class: "ShowHideButton", alt: "+") %></td>
-			<td><%= link_to show.name, show %></td>
-			<td><%= show.opened.strftime("%m/%d/%y") if not show.opened.nil? %></td>
-			<td><%= raw show.artists.collect { |a| link_to(a.flName, artist_path(a)) }.join ', ' %></td>
-			<td><%= show.keywords.collect {|u| u.name}.join ', ' %></td>
-			<td>
-				<%= link_to image_tag('view.png'), show %>
-				<%= link_to image_tag('edit.png'), edit_show_path(show) %>
-				<%= link_to image_tag('delete.png'), show, method: :delete, data: { confirm: 'Are you sure?' } %>
-			</td>
-		</tr>
-		<tr class="<%= "album_row"+show.id.to_s %>" hidden>
-			<td></td><td colspan="4"><%= render 'albums/list', :albums => show.albums.all %></td>
-		</tr>
-	<% end %>
+	<tbody>
+		<% @shows.each do |show| %>
+			<tr>
+				<!-- td><center><%= image_tag('expand.png', id: "ShowHideButton"+show.id.to_s, class: "ShowHideButton", alt: "+") %></center></td -->
+				<td><%= link_to show.name, show %><br></td>
+<%#= render 'albums/list', :albums => show.albums.all %>
+				<td><%= show.opened.strftime("%m/%d/%Y") if not show.opened.nil? %></td>
+				<td><%= raw show.artists.collect { |a| link_to(a.flName, artist_path(a)) }.join ', ' %></td>
+				<td><%= show.keywords.collect {|u| u.name}.join ', ' %></td>
+				<td>
+					<%= link_to image_tag('view.png'), show %>
+					<%= link_to image_tag('edit.png'), edit_show_path(show) %>
+					<%= link_to image_tag('delete.png'), show, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</td>
+			</tr>
+		<% end %>
+	<tbody>
 </table>
 
-<script>
-	SetUpListeners();
+<script src="jquery.tablesorter.min.js"></script> 
+ <script>
+//	SetUpListeners();
+	$(document).ready(function() {
+		$('#sortable').dataTable( {
+			  "columnDefs": [ {
+				"targets": [ -1],
+				"orderable": false
+				} ],
+			"paging":   false,
+			"info":     false
+		} );
+	} );
 </script>
 

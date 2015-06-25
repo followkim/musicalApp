@@ -1,3 +1,45 @@
 // Place all the styles related to the Shows controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**********************************
+Sortable tables
+***********************************/
+#albumList th {
+}
+
+#sortable table  {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#sortable th { 
+    cursor: pointer;
+    padding: 1px 10px 1px 10px;
+    color: #ffffff;
+    border: 1px solid #FFFFFF;
+	background-color: #000066;
+	white-space: nowrap;
+	text-align: left;
+}
+
+/* Draw the arrows on sort */
+#sortable thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#sortable thead tr th.headerSortUp, #sortable thead tr th.headerSortDown {
+	background-color: #000033;
+}
+
+#sortable thead tr th.headerSortUp span {
+  background-image: url('../img/arrowDown.png');
+}
+#sortable thead tr th.headerSortDown span {
+  background-image: url('../img/arrowUp.png');
+}
+
+
+table.dataTable tr.odd { background-color: #CCCCD6; }
+table.dataTable tr.even { background-color: white; }
