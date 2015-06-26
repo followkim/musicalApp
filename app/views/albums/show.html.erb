@@ -1,3 +1,3 @@
 <%= render 'albums/show' %>
 
-<br><%= link_to image_tag('back.png')+" Back to "+@album.show.name, show_path(@album.show) %>
+<br><%= link_to image_tag('back.png')+" Back to "+Show.find(@album.show_id).name, show_path(@album.show_id) %>

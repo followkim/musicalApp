@@ -4,6 +4,6 @@
 		<tr><td><%= label_tag :name %>:</td><td><%= text_field_tag :name, params[:name] %></td></tr>
 		<tr><td><%= label_tag :artist %>:</td><td><%= collection_select :artist, :id, Artist.order(:lname),:id,:lfName, :include_blank => true, :selected=>(params[:artist] ? params[:artist][:id]:'')  %></td></tr>
 		<tr><td><%= label_tag :keyword %>:</td><td><%= collection_select :keyword, :id, Keyword.order(:name),:id,:name, :include_blank => true, :selected=>(params[:keyword]? params[:keyword][:id]:'')  %></td></tr>
-		<tr><td></td><td><%= submit_tag("Search") %></td></tr>
+		<tr><td></td><td><%= submit_tag("Search") %> <%= link_to "Clear", shows_path %></td></tr>
 	</table>
 <% end %>

@@ -1,16 +1,15 @@
 class ShowsController < ApplicationController
   before_action :set_show, only: [:show, :edit, :update, :destroy]
-  
+
   # GET /shows
   # GET /shows.json
   def index
 	@shows = Show.all
 
 	# Check the search parameters
-	@shows = @shows.where("shows.name LIKE '%#{params[:name]}%'") unless params[:name].to_s.empty?
-	@shows = @shows.joins(:keywords).where("keywords.id = #{params[:keyword][:id]}") unless (params[:keyword].nil? or params[:keyword][:id].to_s.empty?)
-	@shows = @shows.joins(:artists).where("artists.id = #{params[:artist][:id]}") unless (params[:artist].nil? or params[:artist][:id].to_s.empty?)
-
+	@shows = @shows.where("shows.name LIKE '%?%'", params[:name]) unless params[:name].to_s.empty?
+	@shows = @shows.joins(:keywords).where("keywords.id = ?", params[:keyword][:id]) unless (params[:keyword].nil? or params[:keyword][:id].to_s.empty?)
+	@shows = @shows.joins(:artists).where("artists.id = ?", params[:artist][:id]) unless (params[:artist].nil? or params[:artist][:id].to_s.empty?)
 	@shows = @shows.order(:opened)
 
   end
@@ -73,6 +72,7 @@ class ShowsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

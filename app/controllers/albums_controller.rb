@@ -15,7 +15,7 @@ class AlbumsController < ApplicationController
   # GET /albums/new
   def new
     @album = Album.new
-    @album.show = Show.find(params[:show_id])
+    @album.show_id = Show.find(params[:show_id])
   end
 
   # GET /albums/1/edit
@@ -29,7 +29,7 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to show_url(@album.show), notice: 'Album was successfully created.' }
+        format.html { redirect_to show_url(@album.show_id), notice: 'Added new album to '+Show.find(@album.show_id).name+'.' }
         format.json { render :show, status: :created, location: @album }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class AlbumsController < ApplicationController
   def update
     respond_to do |format|
       if @album.update(album_params)
-        format.html { redirect_to show_url(@album.show), notice: 'Album was successfully updated.' }
+        format.html { redirect_to show_url(@album.show_id), notice: 'Album was successfully updated.' }
         format.json { render :show, status: :ok, location: @album }
       else
         format.html { render :edit }
@@ -55,15 +55,15 @@ class AlbumsController < ApplicationController
   # DELETE /albums/1
   # DELETE /albums/1.json
   def destroy
-	if (@album.show.nil?) 
+	if (@album.show_id.nil?) 
 		redirectUrl = albums_url
 	else 
-		redirectUrl = show_url(@album.show)
+		redirectUrl = show_url(@album.show_id)
 	end
 		
     @album.destroy
     respond_to do |format|
-      format.html { redirect_to redirectUrl, notice: 'Album was successfully destroyed.' }
+      format.html { redirect_to redirectUrl, notice: 'Album was successfully deleted.' }
       format.json { head :no_content }
     end
   end
