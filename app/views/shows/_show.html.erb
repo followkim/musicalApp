@@ -1,10 +1,9 @@
 <table>
     <tr>
-      <td><%= link_to image_tag(show.picture, options={width: "200"}), show %>
+      <td><%= image_tag(show.picture, options={width: "200", alt: show.name, class:"show"}, ) %>
       <td>
         <h2><%= link_to show.name, show %></h2>
-        <b>By:</b> 
-			<%= raw show.artists.collect { |a| link_to(a.flName, artist_path(a)) }.join ', ' %>
+        <b>By:</b> <%= raw show.artists.collect { |a| link_to(a.flName, artist_path(a)) }.join ', ' %>
 			
         <% if not show.desc.empty? %>
           <p><b>Description:</b> <%= show.desc %>
@@ -19,10 +18,13 @@
         <% if not show.link.empty? %>
           <p><b>Website:</b> <a href="<%= show.link %>"><%= show.link %><a/>
         <% end %>
-		<p><%= link_to image_tag('edit.png')+" Edit "+show.name, edit_show_path(show) if current_user %>
-		<br><%= link_to image_tag('add.png')+ "Add New Album to "+show.name, new_show_album_path(show) if current_user %>
-		<br><%= link_to image_tag('delete.png')+" Delete "+show.name, 
-				show, method: :delete, data: { confirm: 'Are you sure?' } if is_admin? %>
+        <% if current_user %>
+			<p><%= link_to image_tag('edit.png')+" Edit "+show.name, edit_show_path(show)  %>
+			<br><%= link_to image_tag('add.png')+ "Add New Album to "+show.name, new_show_album_path(show) %>
+		<% end %>
+		<% if is_admin? %>
+			<br><%= link_to image_tag('delete.png')+" Delete "+show.name, show, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
         
       </td>
     </tr>

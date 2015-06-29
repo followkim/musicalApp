@@ -2,7 +2,7 @@
 	<% @albums.each do |album| %>
 		<tr>
 			<table><tr>
-				<td><%=image_tag(album.picture, options={width: "100"}) %></td>	
+				<td><%=image_tag(album.picture, options={width: "100", class:"album"}) %></td>	
 				<td>
 					<%= album.name %><br>
 
@@ -18,7 +18,7 @@
 						<%= link_to image_tag('spotify.png', options={height: "16"}), album.spotify, :target => "_spotify" %>
 					<% end %>			
 					<%= link_to image_tag('edit.png'), edit_album_path(album) if current_user %>
-					<%= link_to image_tag('delete.png'), show_path(album.show_id), method: :delete, data: { confirm: 'Are you sure?' } if is_admin?%>
+					<%= link_to image_tag('delete.png'), album, method: :delete, data: { confirm: 'Are you sure?' } if is_admin?%>
 				</td>
 			</tr></table>
 		</tr>

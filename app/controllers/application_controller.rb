@@ -42,6 +42,10 @@ class ApplicationController < ActionController::Base
   protected
 	# Only users that are logged in can make changes-- other users can only make GET requests
 	def authorized?
-		request.get? || (logged_in? && current_user.admin?)
+		request.get? || 
+			(request.delete? && current_user.admin?) ||
+			(request.patch? && current_user) ||
+			(request.post? && current_user) ||
+			(request.put? && current_user)
 	end
 end
