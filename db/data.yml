@@ -343,13 +343,13 @@ artists_shows:
   - - 5
     - 8
   - - 8
-    - 15
-  - - 8
-    - 14
+    - 11
   - - 8
     - 13
   - - 8
-    - 11
+    - 14
+  - - 8
+    - 15
   - - 9
     - 13
   - - 9
@@ -364,6 +364,119 @@ artists_shows:
     - 16
   - - 13
     - 17
+
+---
+identities:
+  columns:
+  - id
+  - name
+  - email
+  - password_digest
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$o4mjDxJ46/lH77Rst2G5ge1Vi4c86TQO.wX3ZIPRp.E/h0VPEk99."
+    - 2015-06-29 00:18:08.000000000 Z
+    - 2015-06-29 00:18:08.000000000 Z
+  - - 2
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$0unixjPkpJVfFPvRK.mkZO0vxyRFeu1fP80zEg2btCWqqGTk7kJAW"
+    - 2015-06-29 00:34:42.000000000 Z
+    - 2015-06-29 00:34:42.000000000 Z
+  - - 3
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$rmt8tI9JBzLcoLkqVbj6O.9ruY7hKVRQtnqaJA9760xCOZmR.3PuO"
+    - 2015-06-29 00:35:40.000000000 Z
+    - 2015-06-29 00:35:40.000000000 Z
+  - - 4
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$knobA7xKKzWOZXkmh5qWgeDP9T9VKMiS.OSXRwUSXGPYkSA4DTqJO"
+    - 2015-06-29 00:49:00.000000000 Z
+    - 2015-06-29 00:49:00.000000000 Z
+  - - 5
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$k4xjx.mIRvk05gnYdPjV3OEYX3wJ60LSGedOR1vLUB0oVvHYgmabu"
+    - 2015-06-29 00:59:37.000000000 Z
+    - 2015-06-29 00:59:37.000000000 Z
+  - - 6
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$P6YmsOydC.da.1tH1WS/nOroulQ9CBz2oB7MMM15AHtJh6z5gdKFi"
+    - 2015-06-29 01:00:15.000000000 Z
+    - 2015-06-29 01:00:15.000000000 Z
+  - - 7
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$n9INvZnByWUXh78ygVGPqe6mewUs20I4BFiU9zAC4.qNV4ijvN9jS"
+    - 2015-06-29 01:32:30.000000000 Z
+    - 2015-06-29 01:32:30.000000000 Z
+  - - 8
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$r219GMUNx5uXDAFs6d9z1uZJ4wkwrYGStBzflgfVxdeq.PQYnJKfi"
+    - 2015-06-29 01:33:22.000000000 Z
+    - 2015-06-29 01:33:22.000000000 Z
+  - - 9
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$y9zCV4wB7NAVSb7x5iPOGewMdEDsSPwps4f5MYoRqYHDYkK0gXNgO"
+    - 2015-06-29 01:39:31.000000000 Z
+    - 2015-06-29 01:39:31.000000000 Z
+  - - 10
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$xt/5xSpQmUxl.T0OksICAO5ZuIMFb0KtY147j4GvrsEVSElBeYu0u"
+    - 2015-06-29 01:51:12.000000000 Z
+    - 2015-06-29 01:51:12.000000000 Z
+  - - 11
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$7l1Y6U0QmyEWwwyN4wL5Y.SdgQS3qZV0B3iSHFigUI5gMAykIJB66"
+    - 2015-06-29 01:53:29.000000000 Z
+    - 2015-06-29 01:53:29.000000000 Z
+  - - 12
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$a85v5ndP.y26xpZqGoVpf.2DaCerwIluz1gsCHgNw./6RJeh0XxPu"
+    - 2015-06-29 01:54:21.000000000 Z
+    - 2015-06-29 01:54:21.000000000 Z
+  - - 13
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$h99qfUGsvj3fnuAkkTaN2eP4qEm3mUZw/Be/HAVJDw4DgTP2hJ.mq"
+    - 2015-06-29 01:54:39.000000000 Z
+    - 2015-06-29 01:54:39.000000000 Z
+  - - 14
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$10jOVo1uoaGXBq5TaynysOJwthwlDR7lyizp5oArGF7oCWehfglx2"
+    - 2015-06-29 01:56:09.000000000 Z
+    - 2015-06-29 01:56:09.000000000 Z
+  - - 15
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$0i3.ooxUZ/cNqBWIoHr2Ce0afLVFfbNfWXUyB/8jiJKc91/6yLyGO"
+    - 2015-06-29 01:57:12.000000000 Z
+    - 2015-06-29 01:57:12.000000000 Z
+  - - 16
+    - followkim
+    - followkim@gmail.com
+    - "$2a$10$vhUuyz2FCUL4TJdTg8EDPOkFm7R2oG213FMFFHmUPzzcyG0E6fs2a"
+    - 2015-06-29 01:57:48.000000000 Z
+    - 2015-06-29 01:57:48.000000000 Z
+  - - 17
+    - Kim Lewes
+    - kelwes@gmail.com
+    - "$2a$10$aHCL5LT4NHcLKjGdMgljo.GtkApuahwduU93CRVfc51/EgK3cggHK"
+    - 2015-06-29 04:22:55.000000000 Z
+    - 2015-06-29 04:22:55.000000000 Z
 
 ---
 keywords:
@@ -445,35 +558,35 @@ keywords_shows:
   - - 1
     - 1
   - - 2
-    - 2
+    - 3
   - - 2
-    - 13
+    - 8
   - - 2
-    - 14
+    - 11
+  - - 2
+    - 17
+  - - 2
+    - 16
+  - - 2
+    - 15
   - - 2
     - 1
   - - 2
-    - 15
+    - 14
   - - 2
-    - 16
+    - 13
   - - 2
-    - 17
-  - - 2
-    - 11
-  - - 2
-    - 8
-  - - 2
-    - 3
+    - 2
   - - 7
-    - 16
-  - - 7
-    - 11
-  - - 7
-    - 15
+    - 14
   - - 7
     - 13
   - - 7
-    - 14
+    - 15
+  - - 7
+    - 11
+  - - 7
+    - 16
   - - 9
     - 16
   - - 9
@@ -485,9 +598,9 @@ keywords_shows:
   - - 9
     - 17
   - - 10
-    - 17
-  - - 10
     - 8
+  - - 10
+    - 17
   - - 11
     - 17
   - - 17
@@ -660,3 +773,35 @@ shows:
     - ''
     - 2015-06-20 04:12:53.000000000 Z
     - 2015-06-20 04:13:08.000000000 Z
+
+---
+users:
+  columns:
+  - id
+  - provider
+  - uid
+  - name
+  - created_at
+  - updated_at
+  - admin
+  - fname
+  - lname
+  records: 
+  - - 2
+    - identity
+    - '1'
+    - followkim
+    - 2015-06-29 02:11:43.000000000 Z
+    - 2015-06-29 02:47:48.000000000 Z
+    - true
+    - Kimberley
+    - Gray
+  - - 4
+    - identity
+    - '17'
+    - klewes
+    - 2015-06-29 04:22:55.000000000 Z
+    - 2015-06-29 04:23:13.000000000 Z
+    - false
+    - Kim
+    - Lewes
