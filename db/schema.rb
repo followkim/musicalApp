@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616003048) do
+ActiveRecord::Schema.define(version: 20150629022735) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(version: 20150616003048) do
 
   add_index "comments", ["show_id"], name: "index_comments_on_show_id", using: :btree
 
+  create_table "identities", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
   create_table "keywords", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
@@ -80,6 +88,17 @@ ActiveRecord::Schema.define(version: 20150616003048) do
     t.string   "title",      limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "provider",   limit: 255
+    t.string   "uid",        limit: 255
+    t.string   "name",       limit: 255
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.boolean  "admin",      limit: 1,   default: false, null: false
+    t.string   "fname",      limit: 255
+    t.string   "lname",      limit: 255
   end
 
   add_foreign_key "comments", "shows"
