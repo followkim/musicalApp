@@ -19,10 +19,10 @@
         <% if not show.link.empty? %>
           <p><b>Website:</b> <a href="<%= show.link %>"><%= show.link %><a/>
         <% end %>
-		<p><%= link_to image_tag('edit.png')+" Edit "+show.name, edit_show_path(show) %>
-		<br><%= link_to image_tag('add.png')+ "Add New Album to "+show.name, new_show_album_path(show) %>
+		<p><%= link_to image_tag('edit.png')+" Edit "+show.name, edit_show_path(show) if current_user %>
+		<br><%= link_to image_tag('add.png')+ "Add New Album to "+show.name, new_show_album_path(show) if current_user %>
 		<br><%= link_to image_tag('delete.png')+" Delete "+show.name, 
-				show, method: :delete, data: { confirm: 'Are you sure?' } %>
+				show, method: :delete, data: { confirm: 'Are you sure?' } if is_admin? %>
         
       </td>
     </tr>

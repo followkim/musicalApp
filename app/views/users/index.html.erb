@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uid</th>
+      <th>Username</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Admin</th>
+      <th>&nbsp;</th>
+      <th>Provider</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.uid %></td>
+        <td><%= user.name %></td>
+        <td><%= user.fname %></td>
+        <td><%= user.lname %></td>
+        <td><%= user.admin %></td>
+        <td>
+			<%= link_to image_tag('view.png'), user %>
+			<%= link_to image_tag('edit.png'), edit_user_path(user) if is_me?(user) or is_admin? %>
+			<%= link_to image_tag('delete.png'), user, method: :delete, 
+				data: { confirm: 'Are you sure?' } if is_admin?  %>
+		</td>
+        <td><%= user.provider %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

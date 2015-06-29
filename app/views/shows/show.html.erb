@@ -3,7 +3,8 @@
 <hr>
 <h2>Albums:</h2>
 <%= render 'albums/index' %>
-<%= link_to image_tag('add.png')+ "Add New Album to "+@show.name, new_show_album_path(@show) %>
+<%= link_to image_tag('add.png')+ "Add New Album to "+@show.name, new_show_album_path(@show) if current_user %>
 <hr>
+<%= link_to image_tag('add.png')+ "Add New Show", new_show_path if current_user %>
 <br><%= link_to image_tag('back.png')+' Back to All Shows', shows_path %>
 

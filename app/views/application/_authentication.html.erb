@@ -1,0 +1,10 @@
+<div>
+	<% if current_user %>
+		User: <%= link_to(current_user.name, current_user) %> | 
+		<%= link_to("Log out", "/signout") %>
+	<% else %>
+		<%= link_to("Log in", "/auth/identity") %> | 
+		<%= link_to("Register", "/auth/identity/register") %>	
+	<% end %>
+</div>
+<hr />

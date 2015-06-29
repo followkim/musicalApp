@@ -1,24 +1,31 @@
 Rails.application.routes.draw do
+  resources :users
+
   resources :shows do
     resources :albums
     resources :keywords
   end
-  resources :albums
+
   resources :artists do 
     resources :shows
   end
-  resources :keywords
-
-#  resources :keywords
-#  resources :comments
+  resources :albums
   
-  
-  root :to => 'shows#index'
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'shows#index'
+  
+  # Login
+  post "/auth/:provider/callback" => "sessions#create"
+	
+  # Login
+  get "/signout" => "sessions#destroy", :as => :signout
+  
+
+#   match "/auth/identity/register"
+
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

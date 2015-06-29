@@ -1,4 +1,4 @@
-<%= form_for(@show) do |f| %>
+<%= form_for(@show, :html => { :multipart => true } ) do |f| %>
 
 	<!-- Check for errors from edit -->
 	<% if @show.errors.any? %>
@@ -12,6 +12,7 @@
 		</div>
 	<% end %>
 
+	<%#= f.text_field :name %>
 	<div class="field">
 		<%= f.label :name %><br>
 		<%= f.text_field :name %>
@@ -19,7 +20,7 @@
 	
 	<div class="field">
 		<%= f.label :picture %><br>
-		<%= image_tag(@show.picture, options={height: "250"}) %><br>
+		<%= image_tag(@show.picture, options={height: "250"}) + raw("<br>") unless @show.picture.blank? %>
 		<%= f.text_field :picture %>
 	</div>
 	
@@ -35,10 +36,7 @@
 	</div>
 	
 	<!-- Show website -->
-	<div class="field">
-		<%= f.label :link %><br>
-		<%= f.text_field :link %>
-	</div>
+	<%= f.text_field :link %>
 		
 	<!-- Show keywords -->
 	<div class = "field">

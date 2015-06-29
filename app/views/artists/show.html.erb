@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @artist.fname %> <%= @artist.lname %></h1>
 
-<%= link_to image_tag('add.png')+ "Add New Show for "+@artist.flName, new_artist_show_path(@artist) %><br>
-<%= link_to image_tag('edit.png')+ "Edit "+@artist.flName, edit_artist_path(@artist) %> <br>
-<%= link_to image_tag('delete.png')+"Delete "+@artist.flName, @artist, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to image_tag('add.png')+ "Add New Show for "+@artist.flName, new_artist_show_path(@artist) if current_user %><br>
+<%= link_to image_tag('edit.png')+ "Edit "+@artist.flName, edit_artist_path(@artist) if current_user %> <br>
+<%= link_to image_tag('delete.png')+"Delete "+@artist.flName, @artist, method: :delete, data: { confirm: 'Are you sure?' } if is_admin?  %>
 
 <hr>
 <h2>Shows:</h2>

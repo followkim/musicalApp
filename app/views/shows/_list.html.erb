@@ -1,7 +1,7 @@
 
 <table id="sortable">
 	<thead>
-		<!-- th><span></span></th -->
+		<!-- th><span>&nbsp;</span></th -->
 		<th><span>Name</span></th>
 		<th><span>Opened</span></th>
 		<th><span>Artists</span></th>
@@ -11,34 +11,30 @@
 	<tbody>
 		<% @shows.each do |show| %>
 			<tr>
-				<!-- td><center><%= image_tag('expand.png', id: "ShowHideButton"+show.id.to_s, class: "ShowHideButton", alt: "+") %></center></td -->
-				<td><%= link_to show.name, show %><br></td>
-<%#= render 'albums/list', :albums => show.albums.all %>
+				<!-- td class="details-control">&nbsp;</td -->
+				<td><%= link_to show.name, show %></td>
 				<td><%= show.opened.strftime("%m/%d/%Y") if not show.opened.nil? %></td>
 				<td><%= raw show.artists.collect { |a| link_to(a.flName, artist_path(a)) }.join ', ' %></td>
-				<td><%= show.keywords.collect {|u| u.name}.join ', ' %></td>
+				<td><%= raw show.keywords.collect{ |k| link_to(k.name,   shows_path + "?keyword[id]="+k.id.to_s)}.join ', ' %></td>
 				<td>
 					<%= link_to image_tag('view.png'), show %>
-					<%= link_to image_tag('edit.png'), edit_show_path(show) %>
-					<%= link_to image_tag('delete.png'), show, method: :delete, data: { confirm: 'Are you sure?' } %>
+					<%= link_to image_tag('edit.png'), edit_show_path(show) if current_user %>
+					<%= link_to image_tag('delete.png'), show, method: :delete, data: { confirm: 'Are you sure?' } if is_admin? %>
 				</td>
 			</tr>
+			<%#!-- tr class="albumRow" ><td colspan=6><div width="100%"><%= render 'albums/list', :albums => show.albums.all %></div></td></tr --%>
 		<% end %>
 	<tbody>
 </table>
 
-<script src="jquery.tablesorter.min.js"></script> 
- <script>
-//	SetUpListeners();
+<script>
+
 	$(document).ready(function() {
 		$('#sortable').dataTable( {
-			  "columnDefs": [ {
-				"targets": [ -1],
-				"orderable": false
-				} ],
+			"columnDefs": [ {"targets": [-1], "orderable": false} ],
 			"paging":   false,
 			"info":     false
 		} );
 	} );
-</script>
 
+</script>

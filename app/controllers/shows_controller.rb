@@ -1,17 +1,16 @@
 class ShowsController < ApplicationController
   before_action :set_show, only: [:show, :edit, :update, :destroy]
+  before_filter :check_login
 
   # GET /shows
   # GET /shows.json
   def index
-	@shows = Show.all
+	@shows = Show.order(:opened)
 
 	# Check the search parameters
 	@shows = @shows.where("shows.name LIKE '%?%'", params[:name]) unless params[:name].to_s.empty?
 	@shows = @shows.joins(:keywords).where("keywords.id = ?", params[:keyword][:id]) unless (params[:keyword].nil? or params[:keyword][:id].to_s.empty?)
 	@shows = @shows.joins(:artists).where("artists.id = ?", params[:artist][:id]) unless (params[:artist].nil? or params[:artist][:id].to_s.empty?)
-	@shows = @shows.order(:opened)
-
   end
 
   # GET /shows/1
@@ -82,6 +81,6 @@ class ShowsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def show_params
-       params.require(:show)# .permit(:name, :picture, :desc, :opened, :link, :artist_id, :keyword_ids)
+       params.require(:show).permit(:name, :picture, :desc, :opened, :link, :artist_ids, :keyword_ids)
    end
  end
