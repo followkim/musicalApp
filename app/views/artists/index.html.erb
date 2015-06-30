@@ -2,7 +2,7 @@
 
 <h1>Listing Artists</h1>
 
-<table>
+<table id="sortable">
   <thead>
     <tr>
       <th>First Name</th>
@@ -47,3 +47,15 @@
 
 <%= link_to image_tag('add.png')+' New Artist', new_artist_path %>
 
+
+<script>
+
+	$(document).ready(function() {
+		$('#sortable').dataTable( {
+			"columnDefs": [ {"targets": [-1], "orderable": false} ],
+			"paging":   false,
+			"info":     false
+		} );
+	} );
+
+</script>

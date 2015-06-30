@@ -7,9 +7,11 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-		<%= render 'authentication' %>
-		<%= render 'navigation' %>
-		
+		<table width="100%"><tr>
+			<td width="50%"><div class="leftH"><%= render 'navigation' %></div></td>
+			<td width="50%"><div class="rightH"><%= render 'authentication' %></div></td>
+		</tr></table>
+		<hr />
 		<%= yield %>
 	</body>
 </html>

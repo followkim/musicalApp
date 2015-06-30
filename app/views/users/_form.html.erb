@@ -27,7 +27,12 @@
   </div>
 
   <div class="field">
-	<%= f.label :admin %>: <%= f.check_box :admin %>
+	<%= f.label :admin %>: 
+	<% if is_admin? %>
+		<%= f.check_box :admin if is_admin?%>
+	<% else %>
+		<%= @user.admin %>
+	<% end %>
   </div>
 
   <div class="field">

@@ -2,7 +2,7 @@
 
 <h1>Listing Users</h1>
 
-<table>
+<table id = "sortable">
   <thead>
     <tr>
       <th>Uid</th>
@@ -34,3 +34,16 @@
     <% end %>
   </tbody>
 </table>
+
+
+<script>
+
+	$(document).ready(function() {
+		$('#sortable').dataTable( {
+			"columnDefs": [ {"targets": [-2, -1], "orderable": false} ],
+			"paging":   false,
+			"info":     false
+		} );
+	} );
+
+</script>

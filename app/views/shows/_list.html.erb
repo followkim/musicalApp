@@ -1,28 +1,30 @@
 
-<table id="sortable">
+<table class="sortable">
 	<thead>
-		<!-- th><span>&nbsp;</span></th -->
-		<th><span>Name</span></th>
-		<th><span>Opened</span></th>
-		<th><span>Artists</span></th>
-		<th><span>Keywords</span></th>
-		<th><span>&nbsp;</span></th>
+		<%#= th></th %>
+		<th>Name</th>
+		<th>Opened</th>
+		<th>Artists</th>
+		<th>Keywords</th>
+		<th>Albums</th>
+		<th>&nbsp;</th>
 	</thead>
 	<tbody>
 		<% @shows.each do |show| %>
 			<tr>
-				<!-- td class="details-control">&nbsp;</td -->
+				<%#= td class="details-control">&nbsp;</td %>
 				<td><%= link_to show.name, show %></td>
 				<td><%= show.opened.strftime("%m/%d/%Y") if not show.opened.nil? %></td>
 				<td><%= raw show.artists.collect { |a| link_to(a.flName, artist_path(a)) }.join ', ' %></td>
 				<td><%= raw show.keywords.collect{ |k| link_to(k.name,   shows_path + "?keyword[id]="+k.id.to_s)}.join ', ' %></td>
+				<td><center><%= show.albums.count %></center></td>
 				<td>
 					<%= link_to image_tag('view.png'), show %>
 					<%= link_to image_tag('edit.png'), edit_show_path(show) if current_user %>
 					<%= link_to image_tag('delete.png'), show, method: :delete, data: { confirm: 'Are you sure?' } if is_admin? %>
 				</td>
 			</tr>
-			<%#!-- tr class="albumRow" ><td colspan=6><div width="100%"><%= render 'albums/list', :albums => show.albums.all %></div></td></tr --%>
+			<%# tr class="albumRow" ><td colspan=6></td></tr %>
 		<% end %>
 	<tbody>
 </table>
@@ -30,11 +32,10 @@
 <script>
 
 	$(document).ready(function() {
-		$('#sortable').dataTable( {
+		$('.sortable').dataTable( {
 			"columnDefs": [ {"targets": [-1], "orderable": false} ],
 			"paging":   false,
 			"info":     false
 		} );
 	} );
-
 </script>

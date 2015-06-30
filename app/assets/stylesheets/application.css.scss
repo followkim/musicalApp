@@ -104,21 +104,35 @@ div {
 /**********************************
 Sortable tables
 ***********************************/
-#sortable table  {
+table.dataTable  {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-#sortable th { 
+table.dataTable {
+	white-space: nowrap;
+    padding: 1px 10px 1px 20px;
+	background-color: white;
+    border-collapse: collapse;
+    
+}
+
+table.dataTable thead th { 
+    padding: 1px 20px 1px 10px;
+    border: 1px solid #FFFFFF;
     cursor: pointer;
-    padding: 0px;
     color: #ffffff;
 	background-color: #000066;
-	white-space: nowrap;
 	text-align: left;
 }
 
-table.dataTable tr.odd { background-color: #CCCCD6; }
-table.dataTable tr.even { background-color: white; }
+table.dataTable tbody td {
+    padding: 1px 10px 1px 10px;
+	border: 1px solid white;
+	white-space: nowrap;
+}
+
+table.dataTable tr.even { background-color: #CCCCD6; }
+table.dataTable tr.odd { background-color: white; }
 
 td.details-control {
     background: image-url("expand.png") no-repeat center center;
@@ -128,27 +142,22 @@ td.details-control.shown {
     background: image-url("collapse.png") no-repeat center center;
 }
 
-#albumList table {
-    color: black;
-	background-color: white;
-	border-collapse: collapse;
-	padding: 1px;
-	border: 1px solid black;
-	text-align: left;
- } 
-
-div.rightH {
-	text-align: right;
-}
-
-div.leftH {
+table.albumList {
+    border: 1px solid black;
+    border-collapse: collapse;
 	text-align: left;
 }
 
-td.rightH {
+td.albumList {
+    border: 1px solid black;
+    border-collapse: collapse;
+	text-align: left;
+}
+
+.rightH {
 	text-align: right;
 }
 
-td.leftH {
+.leftH {
 	text-align: left;
 }

@@ -1,6 +1,6 @@
 <table>
 	<tr>
-		<td><%=image_tag(@album.picture, options={width: "100"}) %></td>	
+		<td><%=image_tag(@album.picture, options={width: "100", alt: @album.name}) %></td>	
 		<td>
 			<b><%= @album.name %></b>
 			<% if not @album.released.to_s.empty? %>
@@ -13,7 +13,7 @@
 			
 			<br>
 			<% if not @album.spotify.nil? %>
-				<%= link_to image_tag('spotify.png', options={height: "16"}), @album.spotify, :target => "_spotify" %>
+				<%= link_to image_tag('spotify.png', options={height: "16", alt: "spotify"}), @album.spotify, :target => "_spotify" %>
 			<% end %>
 			
 			<%= link_to image_tag('edit.png'), edit_album_path(@album) if current_user %>
