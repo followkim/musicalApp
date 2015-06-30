@@ -15,22 +15,25 @@
  *= require_self
  */
  
+
+
+/**********************************
+GENERAL
+***********************************/
 body {
   background-color: #fff;
-  color: #333;
+  color: #333;	
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  text-align: left;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
   vertical-align: top;
 }
 
-pre {
+ppre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
@@ -47,7 +50,7 @@ a {
   }
 
   &.destroy {
-	color: #DB4327;
+	color: #FF0000;
   }
  }
 
@@ -67,6 +70,58 @@ div {
   }
 }
 
+
+/**********************************
+HEADER
+***********************************/
+header {
+	color: #FFFFFF;
+	float: left;
+	margin: 0 0 30px 0;
+	padding: 5px 0 0 0;
+	width: 100%;
+	background-color: #000066;
+	border-bottom: 5px solid #0000FF;
+	margin-bottom: 60px;
+}
+
+header h1 {
+	margin-left: 10px;
+
+}
+
+span.auth {
+	float: right;
+	margin-right: 10px;
+	text-align: right;
+	width: 45%;
+}
+
+span.auth a, span.auth a:visited {
+  color: #fff;
+}
+
+span.auth  a:hover {
+  color: #0099CC;
+}
+
+nav {
+	float: left;
+	margin-left: 10px;
+	text-align: left;
+	width: 45%;
+}
+nav a, nav a:visited {
+  color: #fff;
+}
+
+nav a:hover {
+  color: #0099CC;
+}
+
+/**********************************
+RAILS INFORMATION/ERRORS (from scaffold)
+***********************************/
 #notice {
   color: green;
 }
@@ -102,22 +157,19 @@ div {
 
 
 /**********************************
-Sortable tables
+SORTABLE TABLES
 ***********************************/
-table.dataTable  {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-}
 
 table.dataTable {
-	white-space: nowrap;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     padding: 1px 10px 1px 20px;
 	background-color: white;
     border-collapse: collapse;
-    
+	width: 100%;
 }
 
 table.dataTable thead th { 
-    padding: 1px 20px 1px 10px;
+    padding: 3px 20px 3px 10px;
     border: 1px solid #FFFFFF;
     cursor: pointer;
     color: #ffffff;
@@ -128,6 +180,9 @@ table.dataTable thead th {
 table.dataTable tbody td {
     padding: 1px 10px 1px 10px;
 	border: 1px solid white;
+}
+
+table.dataTable td.noWrap {
 	white-space: nowrap;
 }
 
@@ -142,18 +197,6 @@ td.details-control.shown {
     background: image-url("collapse.png") no-repeat center center;
 }
 
-table.albumList {
-    border: 1px solid black;
-    border-collapse: collapse;
-	text-align: left;
-}
-
-td.albumList {
-    border: 1px solid black;
-    border-collapse: collapse;
-	text-align: left;
-}
-
 .rightH {
 	text-align: right;
 }
@@ -161,3 +204,29 @@ td.albumList {
 .leftH {
 	text-align: left;
 }
+
+.centerH {
+	text-align: center;
+}
+
+/**********************************
+FOOTER
+***********************************/
+
+footer {
+	color: #FFFFFF;
+	float: left;
+	margin: 0 0 30px 0;
+	padding: 5px 0 0 0;
+	width: 100%;
+	background-color: #000066;
+	border-bottom: 5px solid #0000FF;
+	margin-bottom: 60px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+

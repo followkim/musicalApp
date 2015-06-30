@@ -1,26 +1,26 @@
-<table>
+<ul id="gallery">
 	<% @albums.each do |album| %>
-		<tr>
-			<table><tr>
-				<td><%=image_tag(album.picture, options={width: "100", class:"album", alt: album.name}) %></td>	
-				<td>
-					<%= album.name %><br>
+			<li>
+				<table><tr>
+					<td><%=image_tag(album.picture, options={width: "100", class:"album", alt: album.name}) %></td>	
+					<td>
+						<%= album.name %><br>
 
-					<% if not album.desc.to_s.empty? %>
-						<b>Description:</b> <%= album.desc %><br>
-					<% end %>
+						<% if not album.desc.to_s.empty? %>
+							<b>Description:</b> <%= album.desc %><br>
+						<% end %>
 
-					<% if not album.released.nil? %>
-						<b>Released:</b> <%= album.released.strftime("%B %d, %Y") %><br>
-					<% end %>
+						<% if not album.released.nil? %>
+							<b>Released:</b> <%= album.released.strftime("%B %d, %Y") %><br>
+						<% end %>
 
-					<% if not album.spotify.to_s.empty? %>
-						<%= link_to image_tag('spotify.png', options={height: "16", alt:"spotify"}), album.spotify, :target => "_spotify" %>
-					<% end %>			
-					<%= link_to image_tag('edit.png', options={alt:"edit"}), edit_album_path(album) if current_user %>
-					<%= link_to image_tag('delete.png', options={alt:"delete"}), album, method: :delete, data: { confirm: 'Are you sure?' } if is_admin?%>
-				</td>
-			</tr></table>
-		</tr>
+						<% if not album.spotify.to_s.empty? %>
+							<%= link_to image_tag('spotify.png', options={height: "16", alt:"spotify"}), album.spotify, :target => "_spotify" %>
+						<% end %>			
+						<%= link_to image_tag('edit.png', options={alt:"edit"}), edit_album_path(album) if current_user %>
+						<%= link_to image_tag('delete.png', options={alt:"delete"}), album, method: :delete, data: { confirm: 'Are you sure?' } if is_admin?%>
+					</td>
+				</tr></table>
+			</li>
 	<% end %>
-</table>
+</ul>

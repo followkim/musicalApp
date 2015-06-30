@@ -23,7 +23,7 @@
         <td><%= user.fname %></td>
         <td><%= user.lname %></td>
         <td><%= user.admin %></td>
-        <td>
+        <td class="noWrap">
 			<%= link_to image_tag('view.png'), user %>
 			<%= link_to image_tag('edit.png'), edit_user_path(user) if is_me?(user) or is_admin? %>
 			<%= link_to image_tag('delete.png'), user, method: :delete, 

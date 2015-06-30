@@ -30,8 +30,8 @@
 				<%= link_to artist.link %>
 			<% end %>
 		</td>
-		<td><%= artist.shows.count %></td>
-        <td>
+		<td class="centerH"><%= artist.shows.count %></td>
+        <td class="noWrap">
 			<%= link_to image_tag('view.png'), artist_path(artist) %>
 			<%= link_to image_tag('edit.png'), edit_artist_path(artist) if current_user %>
 			<%= link_to image_tag('delete.png'), 

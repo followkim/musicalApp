@@ -1,12 +1,7 @@
-
-<h1>Listing ALL Shows</h1>
+<h1>All Shows</h1>
 <p id="notice"><%= notice %></p>
-
 <%= render 'shows/search'  %>
-
 <%= render 'shows/list'  %>
-
-<br>
-
+<hr />
 <%= link_to image_tag('add.png')+ "Add New Show", new_show_path %><br>
 <%= link_to image_tag('add.png')+ "Add Artist", new_artist_path %>

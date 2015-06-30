@@ -1,4 +1,3 @@
-
 <table class="sortable">
 	<thead>
 		<%#= th></th %>
@@ -18,7 +17,7 @@
 				<td><%= raw show.artists.collect { |a| link_to(a.flName, artist_path(a)) }.join ', ' %></td>
 				<td><%= raw show.keywords.collect{ |k| link_to(k.name,   shows_path + "?keyword[id]="+k.id.to_s)}.join ', ' %></td>
 				<td><center><%= show.albums.count %></center></td>
-				<td>
+				<td class="noWrap" >
 					<%= link_to image_tag('view.png'), show %>
 					<%= link_to image_tag('edit.png'), edit_show_path(show) if current_user %>
 					<%= link_to image_tag('delete.png'), show, method: :delete, data: { confirm: 'Are you sure?' } if is_admin? %>
