@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'shows#index'
+  get ":id" => "shows#show"
   
   # Login
   post "/auth/:provider/callback" => "sessions#create"

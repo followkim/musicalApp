@@ -1,5 +1,8 @@
+# Load boot.rb
 require File.expand_path('../boot', __FILE__)
 
+# Load all components.  Can pick specific framekworks using 'require', 
+# ie 'require "active_model/railtie"'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
