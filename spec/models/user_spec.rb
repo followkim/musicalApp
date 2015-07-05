@@ -2,9 +2,18 @@ require "spec_helper"
 
 RSpec.describe User, :type => :model do
 
-  it { should validate_presence_of :email }
-  it { should validate_presence_of :password }
-  it { should validate_confirmation_of :password }
-  it { should validate_uniqueness_of(:email).case_insensitive }
+	context "Check FactoryGirl"  do
+		it "has a valid factory"  do 
+			FactoryGirl.create(:user).should be_valid 
+		end
+	end
+
+  it "Validate presence of email"
+  it "Validate uniqueness of email"
+  it "Validate presence of username"
+  it "Validate uniqueness of username"
+  it "Validate presence of password" 
+  it "Validate presence of provider"
+  it "Validate presence of admin"
 
 end

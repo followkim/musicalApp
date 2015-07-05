@@ -25,18 +25,28 @@ RSpec.describe Artist, :type => :model do
 	end
 
 	context "Check validation" do
-		let (:a) { Artist.new } 
+#		let (:a) { Artist.new } 
+
 		it "save object identical name" do 
-			a.lname = Artist.last.lname
-			a.fname = Artist.last.fname
-			expect(a.save).to eq false
+			FactoryGirl.build(:artist, fname: Artist.last.fname, lname: Artist.last.lname).should_not be_valid
 		end
 		
-		it "save object different last name, same first name" do 
-			a.lname =  Time.now.to_i.to_s
-			expect(a.save).to eq true
+		it "save object same last name, different first name" do 
+			FactoryGirl.build(:artist, lname: Artist.last.lname).should be_valid
 		end
 
+		it "save object same first name, different last name" do 
+			FactoryGirl.build(:artist, fname: Artist.last.fname).should be_valid
+		end
+
+		it "Shouldn't save without last name" do 
+			FactoryGirl.build(:artist, lname: nil).should_not be_valid
+		end
+
+		it "Shouldn't save without first name" do 
+			FactoryGirl.build(:artist, fname: nil).should_not be_valid
+		end
+		
 	#	it "save object different last name" do 
 	#		a.lname = Artist.last.lname
 	#		expect(a.save).to eq true

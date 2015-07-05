@@ -3,6 +3,12 @@ require 'rails_helper'
 RSpec.describe Show, type: :model do
 
 
+	context "Check FactoryGirl"  do
+		it "has a valid factory"  do 
+			FactoryGirl.create(:show).should be_valid 
+		end
+	end
+
 	context "Check helper methods" do
 		let (:s) { Show.all[rand(Show.count)] } 
 		
