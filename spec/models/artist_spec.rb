@@ -2,6 +2,12 @@ require "spec_helper"
 
 RSpec.describe Artist, :type => :model do
 
+	context "Check FactoryGirl"  do
+		it "has a valid factory"  do 
+			FactoryGirl.create(:artist).should be_valid 
+		end
+	end
+	
 	context "Check helper methods" do
 		let (:a) { Artist.new } 
 		before do 
