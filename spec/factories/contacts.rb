@@ -19,6 +19,14 @@ FactoryGirl.define do
 	end 
 
 
+	factory :album do |u|  
+		u.name 		{ Faker::Lorem.sentence(rand(10)) } 
+		u.desc 		{ Faker::Lorem.paragraph(rand(10)) } 
+		u.show 		{ FactoryGirl.create(:show) }
+		u.released  { u.show.opened + rand(10)  }
+	end 
+
+
 	factory :user do |u| 
 		u.fname { Faker::Name.first_name } 
 		u.lname { Faker::Name.last_name } 
